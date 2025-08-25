@@ -1,0 +1,10 @@
+$background: #141D2F;
+$green:#70E61C;
+$purple:#9747FF;
+$turquoise:#1CDAE6;
+
+@mixin PositionBox($d:flex, $jc:center, $ai:center) {
+  display: $d;
+  justify-content: $jc;
+  align-items: $ai;
+}

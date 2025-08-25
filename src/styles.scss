@@ -1,21 +1,11 @@
+@use './styles/globels' as *;
+
 @font-face {
   font-display: swap;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   src: url('../public/fonts/poppins-v23-latin-regular.woff2') format('woff2');
-}
-
-$background: #141D2F;
-$green:#70E61C;
-$purple:#9747FF;
-$turquoise:#1CDAE6;
-
-@mixin PositionBox($d:flex, $js:center, $ai:center) {
-  display: $d;
-  justify-content: $jc;
-  align-items: $ai;
-  text-align: $ta;
 }
 
 *{

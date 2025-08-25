@@ -1,0 +1,8 @@
+@use '../../styles/globels' as *;
+
+:host {
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: $background;
+}
