@@ -1,10 +1,22 @@
 $background: #141D2F;
-$green:#70E61C;
-$purple:#9747FF;
-$turquoise:#1CDAE6;
+$green: #70E61C;
+$purple: #9747FF;
+$turquoise: #1CDAE6;
 
-@mixin PositionBox($d:flex, $jc:center, $ai:center) {
+@mixin PositionBox($d: flex, $jc: center, $ai: center, $fd: row) {
   display: $d;
   justify-content: $jc;
   align-items: $ai;
+  flex-direction: $fd
+}
+
+@mixin FirstSection() {
+  box-sizing: border-box;
+  padding: 0 50px;
+  max-width: 1920px;
+}
+
+@mixin WidthAndHeight($w: 100%, $h: 100%) {
+  width: $w;
+  height: $h;
 }

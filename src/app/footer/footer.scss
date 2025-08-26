@@ -1,8 +1,69 @@
 @use '../../styles/globels' as *;
 
 :host {
-    display: block;
-    width: 100%;
-    height: 300px;
+    @include PositionBox();
+    @include WidthAndHeight($h: 300px);
     background-color: $background;
+    border-top: 5px solid $green;
+}
+
+section {
+    @include FirstSection();
+    @include WidthAndHeight();
+    @include PositionBox($jc: space-between);
+}
+
+.logo {
+    @include PositionBox($ai: start, $fd: column);
+
+    >a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+
+        >img {
+            @include WidthAndHeight($w: 200px, $h: 60px);
+        }
+    }
+
+    .legal_notice_button {
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60%;
+            height: 2px;
+            background: $green;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        &:hover::after {
+            opacity: 1
+        }
+
+    }
+}
+
+span {
+    font-size: 24px;
+}
+
+.links {
+    >a {
+        margin-left: 50px;
+
+        >img {
+            @include WidthAndHeight($w: 35px, $h: 35px);
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.4);
+            }
+        }
+    }
 }
