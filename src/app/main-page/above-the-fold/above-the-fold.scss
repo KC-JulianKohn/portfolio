@@ -1,1 +1,99 @@
-        // transform: rotate(-90deg);
+@use '../../../styles/globels' as *;
+
+:host {
+        @include PositionBox();
+        @include WidthAndHeight($h: 100vh);
+        background-color: $background;
+}
+
+main,
+footer {
+        z-index: 10;
+}
+
+section {
+        @include FirstSection();
+        @include PositionBox($fd: column);
+        @include WidthAndHeight();
+}
+
+.background-layer {
+        @include PositionBox($jc: space-between);
+        @include WidthAndHeight();
+        max-width: 1920px;
+        position: absolute;
+
+        >img {
+                @include WidthAndHeight($w: 800px, $h: 800px);
+        }
+
+        >.img-left {
+                margin-left: -250px;
+        }
+
+        >.img-right {
+                margin-right: -250px;
+        }
+}
+
+main {
+        @include PositionBox($fd: column);
+        @include WidthAndHeight($h: 90%);
+
+        >.about_me {
+                @include PositionBox();
+
+                >span {
+                        padding-right: 30px;
+                        text-align: center;
+                        font-size: 110px;
+                        transform: rotate(-90deg);
+                }
+
+                >div {
+                        >h1 {
+                                font-size: 150px;
+                        }
+                        
+                        >span {
+                                font-size: 50px;
+                                color: $purple;
+                        }
+                }
+        }
+
+
+        >button {
+                margin-top: 50px;
+                border: none;
+                background-color: $green;
+                border-radius: 8px;
+                font-size: 24px;
+                padding: 10px 30px 10px 30px;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                        cursor: pointer;
+                        background-color: $purple;
+                        transform: scale(1.2);
+                }
+        }
+}
+
+footer {
+        @include PositionBox($jc: start);
+        @include WidthAndHeight($h: 10%);
+
+        >a {
+                margin-left: 50px;
+
+                >img {
+                        @include WidthAndHeight($w: 35px, $h: 35px);
+                        transition: transform 0.2s ease;
+
+                        &:hover {
+                                transform: scale(1.4);
+                        }
+                }
+        }
+}
