@@ -3,7 +3,7 @@
 :host {
     @include PositionBox();
     @include WidthAndHeight($h: 100px);
-    background-color: $background;
+    background-color: $backgroundcolor;
 }
 
 section {
@@ -38,7 +38,7 @@ nav {
     >.buttons_language {
 
         >.button {
-            background-color: $background;
+            background-color: $backgroundcolor;
             border-color: $green;
             border-width: 1px;
             border-radius: 10px;

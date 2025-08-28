@@ -3,7 +3,7 @@
 :host {
     @include PositionBox();
     @include WidthAndHeight($h: 300px);
-    background-color: $background;
+    background-color: $backgroundcolor;
     border-top: 5px solid $green;
 }
 
@@ -31,13 +31,7 @@ section {
         display: inline-block;
 
         &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60%;
-            height: 2px;
-            background: $green;
+            @include UnderLine(60%, 2px, $green, $bm: 0, $lf: 0);
             opacity: 0;
             transition: opacity 0.2s ease;
         }
