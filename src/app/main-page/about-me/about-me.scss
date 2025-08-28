@@ -1,0 +1,71 @@
+@use '../../../styles/globels' as *;
+
+:host {
+    @include PositionBox();
+    @include WidthAndHeight();
+    background-color: $backgroundcolor;
+    overflow-x: hidden;
+    position: relative;
+    padding: 100px 0 145px 0;
+}
+
+section {
+    @include FirstSection();
+    @include PositionBox($fd: column);
+    @include WidthAndHeight();
+}
+
+main {
+    @include WidthAndHeight();
+    @include PositionBox($jc: space-evenly);
+
+    >div {
+        @include PositionBox($fd: column);
+        @include WidthAndHeight($w: 700px);
+
+        >h1 {
+            font-size: 120px;
+        }
+
+        >span {
+            padding-bottom: 25px;
+        }
+
+        >table {
+
+            >tr {
+                >td {
+                    padding-bottom: 25px;
+
+                    >img {
+                        padding-right: 25px;
+                        transition: transform 0.2s ease;
+
+                        &:hover {
+                            transform: scale(1.4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    >div {
+        >.picture {
+            position: absolute;
+            z-index: 5;
+        }
+
+        >.picture_top {
+            position: absolute;
+            z-index: 20;
+        }
+    }
+
+    >img {
+        @include WidthAndHeight($w: 100vw, $h: 300px);
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+    }
+}
