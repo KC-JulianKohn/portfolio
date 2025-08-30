@@ -6,7 +6,7 @@
     background-color: $backgroundcolor;
     overflow-x: hidden;
     position: relative;
-    padding: 100px 0 145px 0;
+    padding: 100px 0 65px 0;
 }
 
 section {
@@ -63,7 +63,7 @@ main {
     }
 
     >img {
-        @include WidthAndHeight($w: 100vw, $h: 300px);
+        @include WidthAndHeight($w: 100vw, $h: 200px);
         position: absolute;
         bottom: 0;
         z-index: 10;
