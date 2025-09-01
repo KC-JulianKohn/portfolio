@@ -1,0 +1,124 @@
+@use '../../../styles/globels' as *;
+
+:host {
+    @include PositionBox();
+    @include WidthAndHeight();
+    background-color: $backgroundcolor;
+    position: relative;
+    padding: 100px 0 100px 0;
+}
+
+section {
+    @include FirstSection();
+    @include PositionBox($fd: column);
+    @include WidthAndHeight();
+}
+
+.background-layer {
+    @include PositionBox($jc: start);
+    @include WidthAndHeight();
+    max-width: 1920px;
+    position: absolute;
+
+    >img {
+        @include WidthAndHeight($w: 700px, $h: 700px);
+        margin: 600px 0 0 -300px;
+    }
+}
+
+.main_text {
+    @include PositionBox($fd: column);
+    z-index: 10;
+
+
+    >h1 {
+        position: relative;
+        font-size: 120px;
+        margin-bottom: 20px;
+        padding: 0 30px;
+
+        &::before {
+            @include UnderLine(200%, 5px, $turquoise, $tp: 50%, $lf: 100%, $rt: 0);
+        }
+
+        &::after {
+            @include UnderLine(150px, 5px, $turquoise, $tp: 50%, $lf: -150px);
+        }
+    }
+}
+
+.all_projects {
+    @include WidthAndHeight();
+    @include PositionBox();
+    z-index: 10;
+    margin: 50px 0;
+
+    >img {
+        @include WidthAndHeight($w: 400px, $h: 350px);
+        padding: 0 250px;
+    }
+
+    >div {
+        @include WidthAndHeight($w: 40%);
+
+        >h2 {
+            font-size: 32px;
+            color: $purple;
+            margin-bottom: 15px;
+        }
+
+        >p {
+            font-size: 26px;
+            color: $green;
+            margin-bottom: 10px;
+        }
+
+        >div {
+            margin-top: 35px;
+
+            >button {
+                border: none;
+                border-radius: 8px;
+                font-size: 24px;
+                padding: 10px 30px 10px 30px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            >.button_git {
+                background-color: $backgroundcolor;
+                border: solid;
+                border-color: $turquoise;
+                border-width: 1px;
+
+                &:hover {
+                    background-color: $turquoise;
+                }
+
+            }
+
+            >.button_test {
+                background-color: $purple;
+                margin-right: 100px;
+
+                &:hover {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}
+
+.project_1 {
+    @include PositionBox($fd: row-reverse);
+
+    >div {
+        @include PositionBox($fd: column, $ai: end);
+
+        >span {
+            text-align: end;
+        }
+    }
+}

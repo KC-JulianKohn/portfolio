@@ -21,9 +21,9 @@ section {
     position: absolute;
 
     >img {
-        @include WidthAndHeight($w: 800px, $h: 900px);
+        @include WidthAndHeight($w: 700px, $h: 700px);
         z-index: 10;
-        margin: 0 0 -900px -350px;
+        margin: 0 0 -500px -350px;
     }
 }
 
@@ -57,20 +57,19 @@ main {
 footer {
     @include PositionBox($jc: start, $ai: end, $fd: column);
     @include WidthAndHeight($w: 40%);
-    position: relative;
     z-index: 20;
     padding: 0 50px;
     text-align: end;
 
-    &::before {
-        @include UnderLine(100%, 5px, $turquoise, $tp: 20%, $lf: 100%, $rt: 0);
-
-    }
-
     >h1 {
+        position: relative;
         font-size: 120px;
         margin-bottom: 20px;
+        padding-right: 20px;
 
+        &::before {
+            @include UnderLine(100%, 5px, $turquoise, $tp: 50%, $lf: 100%);
+        }
     }
 
     >h2 {

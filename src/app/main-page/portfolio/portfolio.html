@@ -1,1 +1,25 @@
-<p>portfolio works!</p>
+<section>
+    <div class="background-layer">
+        <img src="./img/background/background_05.png" />
+    </div>
+
+    <div class="main_text">
+        <h1>Portfolio</h1>
+        <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+    </div>
+
+    @for (item of allProjects; track $index) {
+    <div class="all_projects project_{{$index}}">
+        <img [src]="item.img">
+        <div>
+            <h2>{{ item.name }}</h2>
+            <p>{{ item.languages }}</p>
+            <span>{{ item.description }}</span>
+            <div>
+                <button class="button_test" (click)="openLink(item.linkgit)">Live test</button>
+                <button class="button_git" (click)="openLink(item.linktest)">Github</button>
+            </div>
+        </div>
+    </div>
+    }
+</section>

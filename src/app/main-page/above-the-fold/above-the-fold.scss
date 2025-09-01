@@ -20,7 +20,7 @@ section {
     position: absolute;
 
     >img {
-        @include WidthAndHeight($w: 800px, $h: 900px);
+        @include WidthAndHeight($w: 700px, $h: 700px);
     }
 
     >.img-left {
@@ -83,7 +83,7 @@ footer {
     z-index: 10;
 
     &::before {
-        @include UnderLine(calc(100vw + 25px), 5px, $green, $tp: 47%, $lf: -100vw, );
+        @include UnderLine(calc(100vw + 25px), 5px, $green, $tp: 47%, $lf: -100vw);
     }
 
     >a {

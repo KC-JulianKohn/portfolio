@@ -5,7 +5,7 @@
     @include WidthAndHeight();
     background-color: $backgroundcolor;
     position: relative;
-    padding: 100px 0 65px 0;
+    padding: 100px 0 120px 0;
 }
 
 section {
@@ -31,6 +31,7 @@ main {
         }
 
         >table {
+            z-index: 30;
             >tr {
                 >td {
                     padding-bottom: 25px;
@@ -49,6 +50,10 @@ main {
     }
 
     >div {
+        >.background_img {
+            @include WidthAndHeight($w: 700px, $h: 700px);
+        }
+
         >.picture {
             position: absolute;
             z-index: 5;
