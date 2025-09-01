@@ -8,11 +8,6 @@
     position: relative;
 }
 
-main,
-footer {
-    z-index: 10;
-}
-
 section {
     @include FirstSection();
     @include PositionBox($fd: column);
@@ -41,6 +36,7 @@ section {
 main {
     @include PositionBox($fd: column);
     @include WidthAndHeight($h: 90%);
+    z-index: 10;
 
     >.about_me {
         @include PositionBox();
@@ -85,9 +81,10 @@ footer {
     @include PositionBox($jc: start);
     @include WidthAndHeight($h: 10%);
     position: relative;
+    z-index: 10;
 
     &::before {
-        @include UnderLine(calc(100vw + 25px), 5px, $green, $tp: 47%, $lf: -100vw,);
+        @include UnderLine(calc(100vw + 25px), 5px, $green, $tp: 47%, $lf: -100vw, );
     }
 
     >a {

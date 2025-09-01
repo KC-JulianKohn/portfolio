@@ -1,0 +1,105 @@
+@use '../../../styles/globels' as *;
+
+:host {
+    @include PositionBox();
+    @include WidthAndHeight();
+    background-color: $backgroundcolor;
+    overflow-x: hidden;
+    position: relative;
+    overflow: visible;
+    padding: 100px 0 100px 0;
+}
+
+section {
+    @include FirstSection();
+    @include PositionBox();
+    @include WidthAndHeight();
+}
+
+.background-layer {
+    @include PositionBox($jc: start);
+    @include WidthAndHeight();
+    max-width: 1920px;
+    position: absolute;
+
+    >img {
+        @include WidthAndHeight($w: 800px, $h: 900px);
+        z-index: 10;
+        margin: 0 0 -900px -350px;
+    }
+}
+
+main {
+    @include PositionBox($jc: start);
+    @include WidthAndHeight($w: 60%);
+    z-index: 20;
+    flex-wrap: wrap;
+    padding-left: 100px;
+
+    >div {
+        @include WidthAndHeight($w: 200px, $h: 200px);
+        @include PositionBox($fd: column);
+        
+        >img {
+            @include WidthAndHeight($w: 80px, $h: 80px);
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: translateY(-20px);
+            }
+        }
+
+        >span {
+            font-size: 16px;
+            padding-top: 5px;
+        }
+    }
+}
+
+footer {
+    @include PositionBox($jc: start, $ai: end, $fd: column);
+    @include WidthAndHeight($w: 40%);
+    z-index: 20;
+    padding: 0 50px;
+    text-align: end;
+
+    &::before {
+        @include UnderLine(calc(100vw + 100px), 5px, $turquoise, $tp: 22%, $rt: -100vw, );
+    }
+
+    >h1 {
+        font-size: 120px;
+        margin-bottom: 20px;
+
+    }
+
+    >h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+
+        >span {
+            font-size: 40px;
+            color: $purple;
+        }
+    }
+
+    >p {
+        margin-bottom: 10px;
+    }
+
+    >button {
+        margin-top: 20px;
+        border: none;
+        background-color: $green;
+        border-radius: 8px;
+        font-size: 24px;
+        padding: 10px 30px 10px 30px;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $purple;
+            transform: scale(1.2);
+        }
+    }
+}
