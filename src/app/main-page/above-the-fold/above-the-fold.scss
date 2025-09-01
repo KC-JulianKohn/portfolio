@@ -4,7 +4,6 @@
     @include PositionBox();
     @include WidthAndHeight($h: 100vh);
     background-color: $backgroundcolor;
-    overflow-x: hidden;
     position: relative;
 }
 

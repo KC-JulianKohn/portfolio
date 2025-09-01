@@ -4,9 +4,7 @@
     @include PositionBox();
     @include WidthAndHeight();
     background-color: $backgroundcolor;
-    overflow-x: hidden;
     position: relative;
-    overflow: visible;
     padding: 100px 0 100px 0;
 }
 
@@ -39,7 +37,7 @@ main {
     >div {
         @include WidthAndHeight($w: 200px, $h: 200px);
         @include PositionBox($fd: column);
-        
+
         >img {
             @include WidthAndHeight($w: 80px, $h: 80px);
             transition: transform 0.2s ease;
@@ -59,12 +57,14 @@ main {
 footer {
     @include PositionBox($jc: start, $ai: end, $fd: column);
     @include WidthAndHeight($w: 40%);
+    position: relative;
     z-index: 20;
     padding: 0 50px;
     text-align: end;
 
     &::before {
-        @include UnderLine(calc(100vw + 100px), 5px, $turquoise, $tp: 22%, $rt: -100vw, );
+        @include UnderLine(100%, 5px, $turquoise, $tp: 20%, $lf: 100%, $rt: 0);
+
     }
 
     >h1 {
