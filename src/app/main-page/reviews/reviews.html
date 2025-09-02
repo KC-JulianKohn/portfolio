@@ -1,1 +1,26 @@
-<p>reviews works!</p>
+<section>
+    <div class="background-layer">
+        <img src="./img/background/background_06.png" />
+    </div>
+
+    <main>
+        <h1>''</h1>
+
+        <div>
+            <span>{{allReviews[0].review}}</span>
+            <p>{{allReviews[0].name}}</p>
+        </div>
+
+        <div>
+            <img [src]="allReviews[0].img">
+        </div>
+    </main>
+
+    <footer>
+        <button class="button_left"><img src="./img/buttons/button_arrow_left.png"></button>
+        @for (item of allReviews; track $index) {
+        <span>●</span>
+        }
+        <button class="button_right"><img src="./img/buttons/button_arrow_right.png"></button>
+    </footer>
+</section>

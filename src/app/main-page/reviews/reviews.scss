@@ -1,0 +1,100 @@
+@use '../../../styles/globels' as *;
+
+:host {
+    @include PositionBox();
+    @include WidthAndHeight();
+    background-color: $backgroundcolor;
+    position: relative;
+    padding: 100px 0 120px 0;
+}
+
+section {
+    @include FirstSection();
+    @include PositionBox($fd: column);
+    @include WidthAndHeight();
+}
+
+.background-layer {
+    @include PositionBox($jc: end);
+    @include WidthAndHeight();
+    max-width: 1920px;
+    position: absolute;
+
+    >img {
+        @include WidthAndHeight($w: 700px, $h: 700px);
+        margin: -150px -400px 0 0;
+    }
+}
+
+main {
+    @include WidthAndHeight();
+    @include PositionBox();
+    z-index: 10;
+
+    >h1 {
+        z-index: 15;
+        margin: -90px -30px 0 0;
+        font-size: 250px;
+        color: $purple;
+    }
+
+    >div {
+        @include PositionBox($fd: column, $jc: space-between, $ai: end);
+        @include WidthAndHeight($w: 40%, $h: 100%);
+        padding: 50px 100px 50px 100px;
+        margin-right: 100px;
+        border: solid;
+        border-width: 5px;
+        border-radius: 30px;
+        border-color: $green;
+
+        >span {
+            padding-bottom: 50px;
+        }
+
+        >p {}
+    }
+
+    >div {
+        @include WidthAndHeight($w: 300px, $h: 300px);
+        position: relative;
+        border-radius: 150px;
+        border: solid;
+        border-color: $purple;
+        border-width: 5px;
+
+        >img {
+            @include WidthAndHeight($w: 300px, $h: 300px);
+        }
+    }
+}
+
+footer {
+    @include PositionBox();
+    z-index: 10;
+    margin-top: 30px;
+
+    >button {
+        @include WidthAndHeight($w: 50px, $h: 50px);
+        @include PositionBox();
+        border: none;
+        background-color: $backgroundcolor;
+
+        &:hover {
+            cursor: pointer;
+            border: solid;
+            border-radius: 50px;
+            border-color: $green;
+        }
+
+        >img {
+            @include WidthAndHeight($w: 40px, $h: 40px);
+        }
+    }
+
+    >span {
+        padding: 0 12px 0px 12px;
+        font-size: 25px;
+        color: $purple;
+    }
+}
