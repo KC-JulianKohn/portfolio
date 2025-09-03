@@ -38,11 +38,12 @@ main {
         color: $purple;
     }
 
-    >div {
+    >.text_box {
         @include PositionBox($fd: column, $jc: space-between, $ai: end);
         @include WidthAndHeight($w: 40%, $h: 100%);
-        padding: 50px 100px 50px 100px;
+        padding: 50px 100px;
         margin-right: 100px;
+        position: relative;
         border: solid;
         border-width: 5px;
         border-radius: 30px;
@@ -52,10 +53,22 @@ main {
             padding-bottom: 50px;
         }
 
-        >p {}
+        >div {
+            @include PositionBox();
+            @include WidthAndHeight();
+            position: relative;
+
+            &::before {
+                content: "";
+                flex: 1;
+                height: 5px;
+                background: $turquoise;
+                margin-right: 20px;
+            }
+        }
     }
 
-    >div {
+    >.img_box {
         @include WidthAndHeight($w: 300px, $h: 300px);
         position: relative;
         border-radius: 150px;
@@ -63,8 +76,13 @@ main {
         border-color: $purple;
         border-width: 5px;
 
+        &::before {
+            @include UnderLine(200%, 5px, $purple, $tp: 50%, $lf: 100%, $rt: 0);
+        }
+
         >img {
             @include WidthAndHeight($w: 300px, $h: 300px);
+            border-radius: 150px;
         }
     }
 }
@@ -96,5 +114,9 @@ footer {
         padding: 0 12px 0px 12px;
         font-size: 25px;
         color: $purple;
+
+        &.active {
+            color: $green;
+        }
     }
 }

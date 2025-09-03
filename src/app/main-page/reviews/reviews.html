@@ -6,21 +6,23 @@
     <main>
         <h1>''</h1>
 
-        <div>
-            <span>{{allReviews[0].review}}</span>
-            <p>{{allReviews[0].name}}</p>
+        <div class="text_box">
+            <span>{{allReviews[currentIndex].review}}</span>
+            <div>
+                <p>{{allReviews[currentIndex].name}}</p>
+            </div>
         </div>
 
-        <div>
-            <img [src]="allReviews[0].img">
+        <div class="img_box">
+            <img [src]="allReviews[currentIndex].img">
         </div>
     </main>
 
     <footer>
-        <button class="button_left"><img src="./img/buttons/button_arrow_left.png"></button>
+        <button class="button_left" (click)="prevReview()"><img src="./img/buttons/button_arrow_left.png"></button>
         @for (item of allReviews; track $index) {
-        <span>●</span>
+        <span [class.active]="currentIndex === $index">●</span>
         }
-        <button class="button_right"><img src="./img/buttons/button_arrow_right.png"></button>
+        <button class="button_right" (click)="nextReview()"><img src="./img/buttons/button_arrow_right.png"></button>
     </footer>
 </section>
