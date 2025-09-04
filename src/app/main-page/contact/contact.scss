@@ -85,7 +85,7 @@ main {
 
             &.valid {
                 border-color: $green;
-                background: url('/img/icons/right.png') no-repeat right 10px center;
+                background: url('/img/icons/right.png') no-repeat right 10px top 10px;
                 background-size: 30px;
             }
 
@@ -166,16 +166,19 @@ main {
             >button {
                 margin-top: 20px;
                 border: none;
-                background-color: $green;
                 border-radius: 8px;
                 font-size: 24px;
                 padding: 10px 30px 10px 30px;
-                transition: transform 0.2s ease;
 
-                &:hover {
-                    cursor: pointer;
-                    background-color: $purple;
-                    transform: scale(1.2);
+                &.activ_to_send {
+                    background-color: $green;
+                    transition: transform 0.2s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $purple;
+                        transform: scale(1.2);
+                    }
                 }
             }
         }
@@ -187,7 +190,7 @@ footer {
     @include WidthAndHeight();
     position: relative;
     z-index: 10;
-    margin-top: 20px;
+    margin-top: 50px;
 
     >a {
         @include PositionBox();

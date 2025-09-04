@@ -14,18 +14,27 @@ export class Contact {
   message: string = '';
   accepted: boolean = false;
   submitted: boolean = false;
-
-  sendMessage() {
-    this.submitted = true;
-    if (!this.accepted) {
-
-    } else {
-      this.submitted = false;
-    }
-  }
+  readyToSend: boolean = false;
 
   isNameValid(): boolean {
     return this.username.length >= 3;
+  }
+
+  isEmailValid(): boolean {
+    return this.email.includes('@');
+  }
+
+  isMessageValid(): boolean {
+    return this.message.length >= 10;
+  }
+
+  sendMessage() {
+    this.submitted = true;
+
+    if (this.isNameValid() && this.isEmailValid() && this.isMessageValid() && this.accepted) {
+      this.submitted = false;
+      // hier könntest du später den Versand einbauen
+    }
   }
 }
 
