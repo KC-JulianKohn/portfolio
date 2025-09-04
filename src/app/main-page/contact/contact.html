@@ -1,1 +1,53 @@
-<p>contact works!</p>
+<section>
+    <div class="background-layer">
+        <img src="./img/background/background_08.png" />
+    </div>
+
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <main>
+        <div class="text_box">
+            <p>Got a problem to solve?</p>
+            <span>Encourage people to contact you and describe what role you are interested in. Show that you will add
+                value to their projects through your work.</span><br>
+            <span>Need a Frontend developer? <b>Contact me!</b></span>
+        </div>
+        <div class="input_box">
+            <input type="text" placeholder="Your name" [(ngModel)]="username" class="username">
+            @if (username && username.length < 3) { 
+                <span>Your name must be at least 3 characters long</span>
+            }
+
+            <input type="text" placeholder="Your email" [(ngModel)]="email" class="email">
+            @if (email && !email.includes('@')) {
+                <span>Your email must contain "@"</span>
+            }
+
+            <textarea type="text" placeholder="Your message" [(ngModel)]="message" class="message"></textarea>
+            @if (message && message.length < 10) { 
+                <span>Your message must be at least 10 characters long</span>
+            }
+
+            <div>
+                <input type="checkbox" id="privacy" [(ngModel)]="accepted" class="checkbox">
+                <label for="privacy">
+                    I've read the <a href="">privacy policy</a> and agree to the processing of my data as
+                    outlined.
+                </label>
+            </div>
+            @if (submitted && !accepted) {
+                <span>Please accept the privacy policy.</span>
+            }
+
+            <div>
+                <button (click)="sendMessage()">Send message</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="#">^</a>
+    </footer>
+</section>

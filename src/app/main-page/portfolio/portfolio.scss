@@ -22,7 +22,7 @@ section {
 
     >img {
         @include WidthAndHeight($w: 700px, $h: 700px);
-        margin: 600px 0 0 -300px;
+        margin: 750px 0 0 -300px;
     }
 }
 
@@ -38,11 +38,11 @@ section {
         padding: 0 30px;
 
         &::before {
-            @include UnderLine(200%, 5px, $turquoise, $tp: 50%, $lf: 100%, $rt: 0);
+            @include UnderLine(200%, 5px, $purple, $tp: 50%, $lf: 100%, $rt: 0);
         }
 
         &::after {
-            @include UnderLine(150px, 5px, $turquoise, $tp: 50%, $lf: -150px);
+            @include UnderLine(150px, 5px, $purple, $tp: 50%, $lf: -150px);
         }
     }
 }

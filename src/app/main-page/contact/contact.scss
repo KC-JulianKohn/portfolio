@@ -1,0 +1,159 @@
+@use '../../../styles/globels' as *;
+
+:host {
+    @include PositionBox();
+    @include WidthAndHeight();
+    background-color: $backgroundcolor;
+    position: relative;
+    padding: 100px 0 100px 0;
+}
+
+section {
+    @include FirstSection();
+    @include PositionBox($fd: column);
+    @include WidthAndHeight();
+}
+
+.background-layer {
+    @include PositionBox($jc: start);
+    @include WidthAndHeight();
+    max-width: 1920px;
+    position: absolute;
+
+    >img {
+        @include WidthAndHeight($w: 700px, $h: 700px);
+        margin: 0 0 -600px -350px;
+    }
+}
+
+header {
+    @include PositionBox();
+    position: relative;
+    z-index: 10;
+    margin-bottom: 20px;
+
+    &::before {
+        @include UnderLine(calc(100vw - 25px), 5px, $turquoise, $tp: 50%, $lf: -100vw);
+    }
+
+    >h1 {
+        font-size: 120px;
+        font-weight: bolder;
+    }
+}
+
+main {
+    @include PositionBox($jc: space-between);
+    @include WidthAndHeight();
+    position: relative;
+    z-index: 10;
+
+    >.text_box {
+        @include PositionBox($fd: column, $jc: start, $ai: start);
+        @include WidthAndHeight($w: 40%);
+
+        >p {
+            padding-bottom: 20px;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+
+        >span {
+            padding-bottom: 15px;
+        }
+    }
+
+    >.input_box {
+        @include PositionBox($fd: column, $ai: start, $jc: start);
+        @include WidthAndHeight($w: 45%);
+
+        >input,
+        textarea {
+            box-sizing: border-box;
+            padding: 10px 20px;
+            background-color: $backgroundcolor;
+            border-radius: 10px;
+            border-color: $purple;
+
+            &:hover {
+                cursor: pointer;
+                border-color: $turquoise;
+            }
+        }
+
+        >span {
+            color: red;
+            font-size: 16px;
+        }
+
+        >.username {
+            @include WidthAndHeight($w: 100%);
+        }
+
+        >.email {
+            @include WidthAndHeight($w: 100%);
+            margin-top: 20px;
+        }
+
+        >.message {
+            @include PositionBox($ai: start, $jc: start);
+            @include WidthAndHeight($w: 100%, $h: 250px);
+            margin-top: 20px;
+        }
+    }
+}
+
+//         <div class="input_box">
+//             <input type="text" placeholder="Your name" [(ngModel)]="username" class="username">
+//             @if (username && username.length < 3) { 
+//                 <span>Your name must be at least 3 characters long</span>
+//             }
+
+//             <input type="text" placeholder="Your email" [(ngModel)]="email" class="email">
+//             @if (email && !email.includes('@')) {
+//                 <span>Your email must contain "@"</span>
+//             }
+
+//             <input type="text" placeholder="Your message" [(ngModel)]="message" class="message">
+//             @if (message && message.length < 10) { 
+//                 <span>Your message must be at least 10 characters long</span>
+//             }
+
+//             <input type="checkbox" id="privacy" [(ngModel)]="accepted" class="checkbox">
+//             <label for="privacy">
+//                 I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
+//             </label>
+//             @if (submitted && !accepted) {
+//                 <span>Please accept the privacy policy.</span>
+//             }
+
+//             <div>
+//                 <button (click)="sendMessage()">Send message</button>
+//             </div>
+//         </div>
+
+
+
+
+
+footer {
+    @include PositionBox($jc: end);
+    @include WidthAndHeight();
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+
+    >a {
+        @include PositionBox();
+        @include WidthAndHeight($w: 40px, $h: 40px);
+        text-decoration: none;
+        border: solid;
+        border-radius: 50px;
+        font-size: 35px;
+
+        &:hover {
+            color: $green;
+            border-color: $green;
+        }
+    }
+}
