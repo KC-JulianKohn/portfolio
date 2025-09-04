@@ -5,6 +5,8 @@
     @include WidthAndHeight($h: 300px);
     background-color: $backgroundcolor;
     border-top: 5px solid $green;
+    position: relative;
+    z-index: 50;
 }
 
 section {

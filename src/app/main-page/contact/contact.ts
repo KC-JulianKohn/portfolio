@@ -1,9 +1,10 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule],
+  imports: [FormsModule, NgClass],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
@@ -22,4 +23,9 @@ export class Contact {
       this.submitted = false;
     }
   }
+
+  isNameValid(): boolean {
+    return this.username.length >= 3;
+  }
 }
+

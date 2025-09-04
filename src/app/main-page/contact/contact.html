@@ -15,35 +15,36 @@
             <span>Need a Frontend developer? <b>Contact me!</b></span>
         </div>
         <div class="input_box">
-            <input type="text" placeholder="Your name" [(ngModel)]="username" class="username">
-            @if (username && username.length < 3) { 
-                <span>Your name must be at least 3 characters long</span>
-            }
+            <input type="text" placeholder="Your name" [(ngModel)]="username" class="username"
+                [ngClass]="{ 'valid': isNameValid(), 'invalid': username && !isNameValid() }">
+            @if (username && username.length < 3) { <span>Your name must be at least 3 characters long</span>
+                }
 
-            <input type="text" placeholder="Your email" [(ngModel)]="email" class="email">
-            @if (email && !email.includes('@')) {
+                <input type="text" placeholder="Your email" [(ngModel)]="email" class="email"
+                    [ngClass]="{ 'valid': isNameValid(), 'invalid': email && !isNameValid() }">
+                @if (email && !email.includes('@')) {
                 <span>Your email must contain "@"</span>
-            }
+                }
 
-            <textarea type="text" placeholder="Your message" [(ngModel)]="message" class="message"></textarea>
-            @if (message && message.length < 10) { 
-                <span>Your message must be at least 10 characters long</span>
-            }
+                <textarea type="text" placeholder="Your message" [(ngModel)]="message" class="message"
+                    [ngClass]="{ 'valid': isNameValid(), 'invalid': message && !isNameValid() }"></textarea>
+                @if (message && message.length < 10) { <span>Your message must be at least 10 characters long</span>
+                    }
 
-            <div>
-                <input type="checkbox" id="privacy" [(ngModel)]="accepted" class="checkbox">
-                <label for="privacy">
-                    I've read the <a href="">privacy policy</a> and agree to the processing of my data as
-                    outlined.
-                </label>
-            </div>
-            @if (submitted && !accepted) {
-                <span>Please accept the privacy policy.</span>
-            }
+                    <div class="checkbox_box">
+                        <input type="checkbox" id="privacy" [(ngModel)]="accepted" class="checkbox">
+                        <label for="privacy">
+                            I've read the <a href="">privacy policy</a> and agree to the processing of my data as
+                            outlined.
+                        </label>
+                    </div>
+                    @if (submitted && !accepted) {
+                    <span>Please accept the privacy policy.</span>
+                    }
 
-            <div>
-                <button (click)="sendMessage()">Send message</button>
-            </div>
+                    <div class="send_button_box">
+                        <button (click)="sendMessage()">Send message</button>
+                    </div>
         </div>
     </main>
 
