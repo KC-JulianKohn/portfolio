@@ -15,14 +15,14 @@ section {
 }
 
 .background-layer {
-    @include PositionBox($jc: start);
+    @include PositionBox($jc: start, $ai: end);
     @include WidthAndHeight();
     max-width: 1920px;
     position: absolute;
 
     >img {
         @include WidthAndHeight($w: 700px, $h: 700px);
-        margin: 0 0 -600px -350px;
+        margin: 0 0 -200px -300px;
     }
 }
 
@@ -43,7 +43,7 @@ header {
 }
 
 main {
-    @include PositionBox($jc: space-between);
+    @include PositionBox($jc: space-between, $ai: start);
     @include WidthAndHeight();
     position: relative;
     z-index: 10;
@@ -66,11 +66,14 @@ main {
     >.input_box {
         @include PositionBox($fd: column, $ai: start, $jc: start);
         @include WidthAndHeight($w: 45%);
+        position: relative;
+        display: inline-block;
 
         >input,
         textarea {
+            outline: none;
             box-sizing: border-box;
-            padding: 10px 20px;
+            padding: 10px 50px 10px 20px;
             background-color: $backgroundcolor;
             border-radius: 10px;
             border-color: $purple;
@@ -78,6 +81,18 @@ main {
             &:hover {
                 cursor: pointer;
                 border-color: $turquoise;
+            }
+
+            &.valid {
+                border-color: $green;
+                background: url('/img/icons/right.png') no-repeat right 10px top 10px;
+                background-size: 30px;
+            }
+
+            &.invalid {
+                border-color: red;
+                background: url('/img/icons/wrong.png') no-repeat right 10px top 10px;
+                background-size: 30px;
             }
         }
 
@@ -100,48 +115,82 @@ main {
             @include WidthAndHeight($w: 100%, $h: 250px);
             margin-top: 20px;
         }
+
+        >.checkbox_box {
+            @include WidthAndHeight();
+            @include PositionBox($jc: start);
+            margin-top: 20px;
+
+            >.checkbox {
+                @include WidthAndHeight($w: 20px, $h: 20px);
+                appearance: none;
+                -webkit-appearance: none;
+                margin-right: 10px;
+                border: 2px solid $green;
+                background-color: $backgroundcolor;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $turquoise;
+                }
+
+                &:checked {
+                    border-color: $green;
+                }
+
+                &:checked::after {
+                    @include PositionBox();
+                    @include WidthAndHeight();
+                    content: "✓";
+                    color: $green;
+                    font-size: 16px;
+                }
+            }
+
+            >label {
+                font-size: 16px;
+
+                >a {
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: $turquoise
+                }
+            }
+        }
+
+        >.send_button_box {
+            @include WidthAndHeight();
+            @include PositionBox();
+            margin-top: 50px;
+
+            >button {
+                margin-top: 20px;
+                border: none;
+                border-radius: 8px;
+                font-size: 24px;
+                padding: 10px 30px 10px 30px;
+
+                &.activ_to_send {
+                    background-color: $green;
+                    transition: transform 0.2s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $purple;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
     }
 }
-
-//         <div class="input_box">
-//             <input type="text" placeholder="Your name" [(ngModel)]="username" class="username">
-//             @if (username && username.length < 3) { 
-//                 <span>Your name must be at least 3 characters long</span>
-//             }
-
-//             <input type="text" placeholder="Your email" [(ngModel)]="email" class="email">
-//             @if (email && !email.includes('@')) {
-//                 <span>Your email must contain "@"</span>
-//             }
-
-//             <input type="text" placeholder="Your message" [(ngModel)]="message" class="message">
-//             @if (message && message.length < 10) { 
-//                 <span>Your message must be at least 10 characters long</span>
-//             }
-
-//             <input type="checkbox" id="privacy" [(ngModel)]="accepted" class="checkbox">
-//             <label for="privacy">
-//                 I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
-//             </label>
-//             @if (submitted && !accepted) {
-//                 <span>Please accept the privacy policy.</span>
-//             }
-
-//             <div>
-//                 <button (click)="sendMessage()">Send message</button>
-//             </div>
-//         </div>
-
-
-
-
 
 footer {
     @include PositionBox($jc: end);
     @include WidthAndHeight();
     position: relative;
     z-index: 10;
-    margin-top: 20px;
+    margin-top: 50px;
 
     >a {
         @include PositionBox();
