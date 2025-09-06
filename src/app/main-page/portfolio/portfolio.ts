@@ -30,7 +30,7 @@ export class Portfolio {
       languages: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       img: './img/projects/projects_el_dragonnoid.png',
-      linkgit: '',
+      linkgit: 'https://github.com/KC-JulianKohn/El_Dragonoid_Modul_12',
       linktest: ''
     },
     {
@@ -38,12 +38,12 @@ export class Portfolio {
       languages: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       img: './img/projects/projects_pokedex.png',
-      linkgit: '',
+      linkgit: 'https://github.com/KC-JulianKohn/PokeDex_Modul_8',
       linktest: ''
     },
   ];
 
   openLink(url: string) {
-    window.open(url, "_blank");
+    window.open(url, "_blank", "noopener noreferrer");
   }
 }

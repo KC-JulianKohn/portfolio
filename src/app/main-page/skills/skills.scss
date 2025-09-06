@@ -5,7 +5,6 @@
     @include WidthAndHeight();
     background-color: $backgroundcolor;
     position: relative;
-    padding: 100px 0 100px 0;
 }
 
 section {
@@ -86,11 +85,12 @@ footer {
         margin-bottom: 10px;
     }
 
-    >button {
+    >a {
         margin-top: 20px;
         border: none;
         background-color: $green;
         border-radius: 8px;
+        text-decoration: none;
         font-size: 24px;
         padding: 10px 30px 10px 30px;
         transition: transform 0.2s ease;

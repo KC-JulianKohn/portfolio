@@ -1,4 +1,4 @@
-<section>
+<section id="contactComponent">
     <div class="background-layer">
         <img src="./img/background/background_08.png" />
     </div>
@@ -32,7 +32,7 @@
 
             <div class="checkbox_box">
                 <input type="checkbox" id="privacy" [(ngModel)]="accepted" class="checkbox">
-                <label for="privacy">I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                <label for="privacy">I've read the <a href="/privacypolicy">privacy policy</a> and agree to the processing of my data as outlined.</label>
             </div>
             @if (submitted && !accepted) {
                 <span>Please accept the privacy policy.</span>

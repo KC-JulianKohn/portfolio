@@ -5,7 +5,6 @@
     @include WidthAndHeight();
     background-color: $backgroundcolor;
     position: relative;
-    padding: 100px 0 100px 0;
 }
 
 section {
@@ -76,9 +75,10 @@ section {
         >div {
             margin-top: 35px;
 
-            >button {
+            >a {
                 border: none;
                 border-radius: 8px;
+                text-decoration: none;
                 font-size: 24px;
                 padding: 10px 30px 10px 30px;
 

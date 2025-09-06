@@ -59,11 +59,12 @@ main {
         }
     }
 
-    >button {
+    >a {
         margin-top: 50px;
         border: none;
         background-color: $green;
         border-radius: 8px;
+        text-decoration: none;
         font-size: 24px;
         padding: 10px 30px 10px 30px;
         transition: transform 0.2s ease;

@@ -1,4 +1,4 @@
-<section>
+<section id="portfolioComponent">
     <div class="background-layer">
         <img src="./img/background/background_05.png" />
     </div>
@@ -16,8 +16,8 @@
             <p>{{ item.languages }}</p>
             <span>{{ item.description }}</span>
             <div>
-                <button class="button_test" (click)="openLink(item.linkgit)">Live test</button>
-                <button class="button_git" (click)="openLink(item.linktest)">Github</button>
+                <a class="button_test" href="{{ item.linktest }}" target="_blank" rel="noopener noreferrer">Live test</a>
+                <a class="button_git" href="{{ item.linkgit }}" target="_blank" rel="noopener noreferrer">Github</a>
             </div>
         </div>
     </div>
