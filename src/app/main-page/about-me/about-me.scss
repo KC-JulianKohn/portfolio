@@ -55,11 +55,13 @@ main {
         }
 
         >.picture {
+            @include WidthAndHeight($w: 500px, $h: 730px);
             position: absolute;
             z-index: 5;
         }
 
         >.picture_top {
+            @include WidthAndHeight($w: 500px, $h: 730px);
             position: absolute;
             z-index: 20;
         }
