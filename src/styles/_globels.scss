@@ -12,10 +12,8 @@ $turquoise: #1CDAE6;
 
 @mixin FirstSection($pt: 100px, $pb: 100px) {
     box-sizing: border-box;
-    padding: 0 5%;
+    padding: $pt 7% $pb 7%;
     max-width: 1920px;
-    padding-top: $pt;
-    padding-bottom: $pt;
 }
 
 @mixin WidthAndHeight($w: 100%, $h: 100%) {
@@ -29,20 +27,8 @@ $turquoise: #1CDAE6;
     width: $w;
     height: $h;
     background: $bc;
-
-    @if $tp !=null {
-        top: $tp;
-    }
-
-    @if $bm !=null {
-        bottom: $bm;
-    }
-
-    @if $lf !=null {
-        left: $lf;
-    }
-
-    @if $rt !=null {
-        right: $rt;
-    }
+    @if $tp !=null { top: $tp; }
+    @if $bm !=null { bottom: $bm; }
+    @if $lf !=null { left: $lf; }
+    @if $rt !=null { right: $rt; }
 }

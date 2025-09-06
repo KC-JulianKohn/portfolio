@@ -10,7 +10,7 @@
 }
 
 section {
-    @include FirstSection();
+    @include FirstSection($pt: 0px, $pb: 0px);
     @include PositionBox($jc: space-between);
     @include WidthAndHeight();
 }
