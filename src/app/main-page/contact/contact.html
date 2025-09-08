@@ -4,42 +4,42 @@
     </div>
 
     <header>
-        <h1>Contact</h1>
+        <h1>{{ 'contact.headline' | translate }}</h1>
     </header>
 
     <main>
         <div class="text_box">
-            <p>Got a problem to solve?</p>
-            <span>Encourage people to contact you and describe what role you are interested in. Show that you will add
-                value to their projects through your work.</span><br>
-            <span>Need a Frontend developer? <b>Contact me!</b></span>
+            <p>{{ 'contact.text_box.text_1' | translate }}</p>
+            <span>{{ 'contact.text_box.text_2' | translate }}</span><br>
+            <span>{{ 'contact.text_box.text_3' | translate }} <b>{{ 'contact.text_box.text_3_bolder' | translate
+                    }}</b></span>
         </div>
         <div class="input_box">
             <input type="text" placeholder="Your name" [(ngModel)]="username" class="username" [ngClass]="{ 'valid': isNameValid(), 'invalid': username && !isNameValid() }">
             @if (username && username.length < 3) { 
-                <span>Your name must be at least 3 characters long</span>
+                <span>{{ 'contact.input_box.username_alert' | translate }}</span>
             }
 
             <input type="text" placeholder="Your email" [(ngModel)]="email" class="email" [ngClass]="{ 'valid': isEmailValid(), 'invalid': email && !isEmailValid() }">
             @if (email && !email.includes('@')) {
-                <span>Your email must contain "@"</span>
+                <span>{{ 'contact.input_box.email_alert' | translate }}</span>
             }
 
             <textarea type="text" placeholder="Your message" [(ngModel)]="message" class="message" [ngClass]="{ 'valid': isMessageValid(), 'invalid': message && !isMessageValid() }"></textarea>
             @if (message && message.length < 10) { 
-                <span>Your message must be at least 10 characters long</span>
-            }
+                <span>{{ 'contact.input_box.message_alert' | translate }}</span>
+                }
 
             <div class="checkbox_box">
                 <input type="checkbox" id="privacy" [(ngModel)]="accepted" class="checkbox">
-                <label for="privacy">I've read the <a href="/privacypolicy">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                <label for="privacy">{{ 'contact.input_box.privacy_text_1' | translate }} <a href="/privacypolicy">{{ 'contact.input_box.privacy_text_2' | translate }}</a> {{ 'contact.input_box.privacy_text_3' | translate }}</label>
             </div>
             @if (submitted && !accepted) {
-                <span>Please accept the privacy policy.</span>
+                <span>{{ 'contact.input_box.privacy_alert' | translate }}</span>
             }
 
             <div class="send_button_box">
-                <button (click)="sendMessage()" [ngClass]="{'activ_to_send': isNameValid() && isEmailValid() && isMessageValid() && accepted}">Send message</button>
+                <button (click)="sendMessage()" [ngClass]="{'activ_to_send': isNameValid() && isEmailValid() && isMessageValid() && accepted}">{{ 'contact.send_button' | translate }}</button>
             </div>
         </div>
     </main>

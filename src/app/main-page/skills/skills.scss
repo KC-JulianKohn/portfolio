@@ -28,10 +28,9 @@ section {
 
 main {
     @include PositionBox($jc: start);
-    @include WidthAndHeight($w: 60%);
+    @include WidthAndHeight($w: 50%);
     z-index: 20;
     flex-wrap: wrap;
-    padding-left: 100px;
 
     >div {
         @include WidthAndHeight($w: 200px, $h: 200px);
@@ -55,9 +54,8 @@ main {
 
 footer {
     @include PositionBox($jc: start, $ai: end, $fd: column);
-    @include WidthAndHeight($w: 40%);
+    @include WidthAndHeight($w: 50%);
     z-index: 20;
-    padding: 0 50px;
     text-align: end;
 
     >h1 {
@@ -72,11 +70,11 @@ footer {
     }
 
     >h2 {
-        font-size: 40px;
+        font-size: 32px;
         margin-bottom: 10px;
 
         >span {
-            font-size: 40px;
+            font-size: 32px;
             color: $purple;
         }
     }

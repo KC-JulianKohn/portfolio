@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Projects {
   name: string;
@@ -11,7 +12,7 @@ interface Projects {
 
 @Component({
   selector: 'app-portfolio',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss'
 })
@@ -20,7 +21,7 @@ export class Portfolio {
     {
       name: 'Join',
       languages: 'Angular | TypeScript | HTML | CSS | Firebase',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      description: 'portfolio.join_text',
       img: './img/projects/projects_join.png',
       linkgit: '',
       linktest: ''
@@ -28,7 +29,7 @@ export class Portfolio {
     {
       name: 'El Dragonnoid',
       languages: 'JavaScript | HTML | CSS',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+      description: 'portfolio.el_dragonnoid_text',
       img: './img/projects/projects_el_dragonnoid.png',
       linkgit: 'https://github.com/KC-JulianKohn/El_Dragonoid_Modul_12',
       linktest: ''
@@ -36,7 +37,7 @@ export class Portfolio {
     {
       name: 'Pokédex',
       languages: 'JavaScript | HTML | CSS | Api',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      description: 'portfolio.pokedex_text',
       img: './img/projects/projects_pokedex.png',
       linkgit: 'https://github.com/KC-JulianKohn/PokeDex_Modul_8',
       linktest: ''

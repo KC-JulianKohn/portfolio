@@ -3,14 +3,23 @@
 
     <nav>
         <div class="links">
-            <a class="aboutme_button" href="#aboutMeComponent">About me</a>
-            <a class="skills_button" href="#skillsComponent">Skills</a>
+            <a class="aboutme_button" href="#aboutMeComponent">{{ 'header.aboutme_button' | translate }}</a>
+            <a class="skills_button" href="#skillsComponent">{{ 'header.skills_button' | translate }}</a>
             <a class="portfolio_button" href="#portfolioComponent">Portfolio</a>
         </div>
 
         <div class="buttons_language">
-            <button class="button" >DE</button>
-            <button class="button button_active">EN</button>
+            @if (translate.getCurrentLang() === 'de') {
+                <button class="button button_active" (click)="translate.use('de')">DE</button>
+            } @else {
+                <button class="button" (click)="translate.use('de')">DE</button>
+            }
+
+            @if (translate.getCurrentLang() === 'en') {
+                <button class="button button_active" (click)="translate.use('en')">EN</button>
+            } @else {
+                <button class="button" (click)="translate.use('en')">EN</button>
+            }
         </div>
     </nav>
 </section>

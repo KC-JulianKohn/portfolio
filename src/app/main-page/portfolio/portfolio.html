@@ -5,7 +5,7 @@
 
     <div class="main_text">
         <h1>Portfolio</h1>
-        <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+        <span>{{ 'portfolio.headline_text' | translate }}</span>
     </div>
 
     @for (item of allProjects; track $index) {
@@ -14,7 +14,7 @@
         <div>
             <h2>{{ item.name }}</h2>
             <p>{{ item.languages }}</p>
-            <span>{{ item.description }}</span>
+            <span>{{ item.description | translate }}</span>
             <div>
                 <a class="button_test" href="{{ item.linktest }}" target="_blank" rel="noopener noreferrer">Live test</a>
                 <a class="button_git" href="{{ item.linkgit }}" target="_blank" rel="noopener noreferrer">Github</a>

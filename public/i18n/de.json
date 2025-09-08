@@ -1,0 +1,58 @@
+{
+    "header": {
+        "aboutme_button": "Über mich",
+        "skills_button": "Fähigkeiten"
+    },
+    "footer": {
+        "legal_notice_button": "Impressum"
+    },
+    "above-the-fold": {
+        "span_text": "FRONTEND ENTWICKLER",
+        "anker_contact": "Kontakt!"
+    },
+    "about-me": {
+        "headline": "Über mich",
+        "aboutme_text": "Ich bin über das Gaming zum Programmieren gekommen. Aber erst seit ich selbst Projekte umsetze, habe ich gemerkt, wie viel Spaß ich wirklich daran habe.",
+        "location_text": "Aktuell befinde ich mich in der Dresdner Gegend, genauer gesagt im Örtchen Coswig. Ich plane jedoch, innerhalb der ersten Hälfte 2026 nach Freiberg zu ziehen, weshalb eine Remote-Stelle perfekt für mich wäre.",
+        "bulb_text": "Ich habe während meines Lehrgangs bei der Developer Akademie sehr viel lernen können und bin gespannt, was ich durch die tägliche Arbeit als Programmierer noch alles erlernen kann.",
+        "puzzle_text": "Bei der Problemlösung bin ich ziemlich beharrlich, wodurch ich unkonventionelle Wege finde. Sollte ich trotzdem keine Lösung finden, frage ich offen nach Hilfe in Form von Erklärungen."
+    },
+    "skills": {
+        "headline": "Fähigkeiten",
+        "text_1": "Diese Liste enthält alle meine bisher erlernten front-end Fähigkeiten.",
+        "text_2": "Auf der Suche nach ",
+        "text_2_color": "weiteren Fähigkeiten",
+        "text_3": "Ich bin gespannt. Was wird hier noch alles dazukommen?",
+        "button_text": "Kontakt aufnehmen"
+    },
+    "portfolio": {
+        "headline_text": "Hier ist eine Auswahl meiner besten Projekte –  testbereit mir nur einem Klick!",
+        "join_text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+        "el_dragonnoid_text": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf El Dragonnoid,  Schätze und Nahrung zu finden, um gegen den Magier zu kämpfen.",
+        "pokedex_text": "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    },
+    "reviews": {
+        "review_1": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+        "review_2": "Michi war ein hervorragender Teamkollege bei DA. Sein positives Engagement und seine Bereitschaft, Verantwortung zu übernehmen, haben wesentlich dazu beigetragen, dass wir unsere Ziele erreichen konnten.",
+        "review_3": "Es war mir eine große Freude, mit Michael zusammenzuarbeiten. Er versteht es, seine Teammitglieder zu motivieren und zu ermutigen, ihr Bestes zu geben, und bringt sich stets mit neuen Ideen in Brainstormings ein. Was das Wohlergehen der Gruppenmitglieder angeht, war er immer präsent und bereit, anderen zuzuhören und ihnen zu helfen, und das mit viel Humor."
+    },
+    "contact": {
+        "headline": "Kontakt",
+        "text_box": {
+            "text_1": "Haben Sie ein Problem zu lösen?",
+            "text_2": "Sie können mich gerne zwanglos kontaktieren, da ich mir verschiedene Positionen und Projekte vorstellen kann und noch keine genaue Präferenz habe.",
+            "text_3": "Benötigen Sie einen Frontend-Entwickler?",
+            "text_3_bolder": "Melchen sie sich!"
+        },
+        "input_box": {
+            "username_alert": "Ihr Name muss mindestens 3 Zeichen lang sein!",
+            "email_alert": "Ihre E-Mail-Adresse muss ein '@' enthalten!",
+            "message_alert": "Ihre Nachricht muss mindestens 10 Zeichen lang sein!",
+            "privacy_alert": "Bitte akzeptieren Sie die Datenschutzerklärung!",
+            "privacy_text_1": "Ich habe die ",
+            "privacy_text_2": "Datenschutzerklärung",
+            "privacy_text_3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+        },
+        "send_button": "Nachricht senden"
+    }
+}

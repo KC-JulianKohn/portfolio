@@ -1,10 +1,11 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule, NgClass],
+  imports: [FormsModule, NgClass, TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })

@@ -1,0 +1,58 @@
+{
+    "header": {
+        "aboutme_button": "About me",
+        "skills_button": "Skills"
+    },
+    "footer": {
+        "legal_notice_button": "Legal Notice"
+    },
+    "above-the-fold": {
+        "span_text": "FRONTEND DEVELOPER",
+        "anker_contact": "Let´s talk!"
+    },
+    "about-me": {
+        "headline": "About me",
+        "aboutme_text": "I got into programming through gaming. But it was only when I started implementing my own projects that I realized how much fun I really enjoy it.",
+        "location_text": "I am currently in the Dresden area, more specifically in the small town of Coswig. However, I am planning to move to Freiberg in the first half of 2026, which is why a remote position would be perfect for me.",
+        "bulb_text": "I learned a lot during my course at the Developer Academy and am excited to see what else I can learn through my daily work as a programmer.",
+        "puzzle_text": "I am quite persistent when it comes to problem solving, which allows me to find unconventional solutions. If I still cannot find a solution, I openly ask for help in the form of explanations."
+    },
+    "skills": {
+        "headline": "My Skills",
+        "text_1": "This list contains all the front-end skills I have learned so far.",
+        "text_2": "Looking for ",
+        "text_2_color": "another skill",
+        "text_3": "I'm curious. What else will be added here?",
+        "button_text": "Get in Touch"
+    },
+    "portfolio": {
+        "headline_text": "Here is a selection of my best projects – ready to test with just one click!",
+        "join_text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "el_dragonnoid_text": "A simple jump-and-run game based on an object-oriented approach. Help El Dragonnoid find treasure and food to fight the magician.",
+        "pokedex_text": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+    },
+    "reviews": {
+        "review_1": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+        "review_2": "Michi was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.",
+        "review_3": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+    },
+    "contact": {
+        "headline": "Contact",
+        "text_box": {
+            "text_1": "Got a problem to solve?",
+            "text_2": "Feel free to contact me, as I am open to various positions and projects and do not yet have any specific preferences.",
+            "text_3": "Need a Frontend developer?",
+            "text_3_bolder": "Contact me!"
+        },
+        "input_box": {
+            "username_alert": "Your name must be at least 3 characters long!",
+            "email_alert": "Your email must contain '@'!",
+            "message_alert": "Your message must be at least 10 characters long!",
+            "privacy_alert": "Please accept the privacy policy!",
+            "privacy_text_1": "I've read the",
+            "privacy_text_2": "privacy policy",
+            "privacy_text_3": "and agree to the processing of my data as outlined."
+        },
+        "send_button": "Send message"
+    }
+}
