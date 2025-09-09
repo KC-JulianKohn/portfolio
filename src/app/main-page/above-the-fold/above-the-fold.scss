@@ -8,7 +8,7 @@
 }
 
 section {
-    @include FirstSection();
+    @include FirstSection($pb: 20px);
     @include PositionBox($fd: column);
     @include WidthAndHeight();
 }
@@ -44,7 +44,7 @@ main {
             padding-right: 30px;
             text-align: center;
             font-size: 110px;
-            transform: rotate(-90deg);
+            writing-mode: sideways-lr;
         }
 
         >div {

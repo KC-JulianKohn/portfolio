@@ -8,7 +8,7 @@
 }
 
 section {
-    @include FirstSection($pb: 120px);
+    @include FirstSection($pb: 100px);
     @include PositionBox($fd: column);
     @include WidthAndHeight();
 }
