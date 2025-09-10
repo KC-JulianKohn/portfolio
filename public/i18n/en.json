@@ -55,5 +55,40 @@
             "privacy_text_3": "and agree to the processing of my data as outlined."
         },
         "send_button": "Send message"
+    },
+    "impressum": {
+        "impressum_headline_1": "Legal notice",
+        "impressum_headline_2": "Contact"
+    },
+    "privacy-policy": {
+        "headline_1": "Privacy Policy",
+        "headline_2": {
+            "text_1": "1. Data protection at a glance",
+            "text_2": "2. Hosting",
+            "text_3": "3. General information and mandatory information"
+        },
+        "headline_3": {
+            "text_1": "General information",
+            "text_2": "Data collection on this website",
+            "text_3": "All-Inkl",
+            "text_4": "Data protection",
+            "text_5": "Note on the responsible body",
+            "text_6": "Storage period",
+            "text_7": "General information on the legal basis for data processing on this website",
+            "text_8": "Recipients of personal data",
+            "text_9": "Withdrawal of your consent to data processing",
+            "text_10": "Right to object to data collection in specific cases and to direct marketing (Art. 21 GDPR)",
+            "text_11": "Right to lodge a complaint with the competent supervisory authority",
+            "text_12": "Right to data portability",
+            "text_13": "Information, correction and deletion",
+            "text_14": "Right to restriction of processing"
+        },
+        "headline_4": {
+            "text_1": "Who is responsible for data collection on this website?",
+            "text_2": "How do we collect your data?",
+            "text_3": "What do we use your data for?",
+            "text_4": "What rights do you have regarding your data?",
+            "text_5": "Order processing"
+        }
     }
 }
