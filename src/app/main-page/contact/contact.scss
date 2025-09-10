@@ -163,21 +163,13 @@ main {
             margin-top: 50px;
 
             >button {
-                margin-top: 20px;
-                border: none;
-                border-radius: 8px;
-                font-size: 24px;
-                padding: 10px 30px 10px 30px;
+                @include AnkerButton();
 
                 &.activ_to_send {
                     background-color: $green;
                     transition: transform 0.2s ease;
 
-                    &:hover {
-                        cursor: pointer;
-                        background-color: $purple;
-                        transform: scale(1.2);
-                    }
+                    @include HoverAnkerButton();
                 }
             }
         }

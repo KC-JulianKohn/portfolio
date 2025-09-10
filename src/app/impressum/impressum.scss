@@ -12,20 +12,38 @@ section {
     @include PositionBox($fd: column);
 
     >h1 {
-        font-size: 100px;
+        position: relative;
+        padding: 0 25px 0 25px;
+        font-size: clamp(1.5rem, 0.55rem + 4.75vw, 6.25rem);
         font-weight: bolder;
         color: $purple;
-        text-decoration: underline;
-        margin-bottom: 50px;
+        margin-bottom: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
+
+        &::before {
+            @include UnderLine(200%, 5px, $turquoise, $tp: 50%, $lf: 100%, $rt: 0);
+        }
+
+        &::after {
+            @include UnderLine(150px, 5px, $turquoise, $tp: 50%, $lf: -150px);
+        }
     }
 
     >h2 {
-        text-align: center;
-        font-size: 32px;
+        font-size: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
         font-weight: bolder;
         color: $turquoise;
         text-decoration: underline;
-        margin: 30px 0 35px;
+        margin: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem) 0 clamp(1.25rem, 1.063rem + 0.938vw, 2.188rem) 0;
     }
 
+}
+
+@media (max-width: 900px) {
+    section {
+        >h1 {
+            &::after {
+                @include UnderLine(150px, 0px, $turquoise, $tp: 50%, $lf: -150px);
+            }
+        }
+    }
 }

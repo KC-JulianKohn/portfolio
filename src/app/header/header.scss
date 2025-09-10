@@ -2,7 +2,7 @@
 
 :host {
     @include PositionBox();
-    @include WidthAndHeight($h: 100px);
+    @include WidthAndHeight($h: clamp(3.125rem, 2.5rem + 3.125vw, 6.25rem));
     background-color: $backgroundcolor;
     position: sticky;
     top: 0;
@@ -16,7 +16,7 @@ section {
 }
 
 img {
-    @include WidthAndHeight($w: 135px, $h: 40px);
+    @include WidthAndHeight($w: clamp(6.875rem, 6.25rem + 3.125vw, 10rem), $h: clamp(1.875rem, 1.625rem + 1.25vw, 3.125rem));
 }
 
 nav {

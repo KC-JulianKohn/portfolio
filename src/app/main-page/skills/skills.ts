@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import Aos from 'aos';
 
@@ -17,7 +17,11 @@ interface Skill {
 export class Skills {
   ngOnInit(): void { Aos.init() };
 
-  Math = Math;
+  isMobile = false;
+
+  constructor() {
+    this.checkViewport();
+  }
 
   skills: Skill[] = [
     { name: 'HTML', img: './img/skills/skill_html.png' },
@@ -30,4 +34,13 @@ export class Skills {
     { name: 'Firebase', img: './img/skills/skill_firebase.png' },
     { name: 'Scrum', img: './img/skills/skill_scrum.png' },
   ];
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkViewport();
+  }
+
+  private checkViewport() {
+    this.isMobile = window.innerWidth <= 1500;
+  }
 }
