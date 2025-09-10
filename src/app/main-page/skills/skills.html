@@ -5,7 +5,7 @@
 
     <main>
         @for (item of skills; track $index) {
-        <div>
+        <div data-aos="fade-right" [attr.data-aos-delay]="Math.floor(Math.random() * ((900 - 300) / 50 + 1)) * 50 + 300" data-aos-offset="350">
             <img [src]="item.img">
             <span>{{ item.name }}</span>
         </div>
@@ -17,6 +17,6 @@
         <p>{{ 'skills.text_1' | translate }}</p>
         <h2>{{ 'skills.text_2' | translate }}<span>{{ 'skills.text_2_color' | translate }}</span>?</h2>
         <p>{{ 'skills.text_3' | translate }}</p>
-        <a href="#contactComponent">{{ 'skills.button_text' | translate }}</a>
+        <a data-aos="flip-up" data-aos-delay="300" data-aos-offset="350" data-aos-duration="800" class="picture_top" href="#contactComponent">{{ 'skills.button_text' | translate }}</a>
     </footer>
 </section>

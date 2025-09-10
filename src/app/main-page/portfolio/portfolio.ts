@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import Aos from 'aos';
 
 interface Projects {
   name: string;
@@ -17,6 +18,8 @@ interface Projects {
   styleUrl: './portfolio.scss'
 })
 export class Portfolio {
+  ngOnInit(): void { Aos.init() }
+
   allProjects: Projects[] = [
     {
       name: 'Join',

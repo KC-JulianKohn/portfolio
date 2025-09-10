@@ -8,5 +8,5 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './above-the-fold.scss'
 })
 export class AboveTheFold {
-
+  
 }

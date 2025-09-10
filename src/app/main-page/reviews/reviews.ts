@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import Aos from 'aos';
 
 interface Review {
   name: string;
@@ -14,6 +15,8 @@ interface Review {
   styleUrl: './reviews.scss'
 })
 export class Reviews {
+  ngOnInit(): void { Aos.init() }
+
   allReviews: Review[] = [
     {
       name: "V. Schuster - Team Partner",

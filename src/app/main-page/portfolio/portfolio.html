@@ -10,12 +10,12 @@
 
     @for (item of allProjects; track $index) {
     <div class="all_projects project_{{$index}}">
-        <img [src]="item.img">
+        <img data-aos="flip-left" data-aos-delay="250" data-aos-offset="250" class="picture_top" [src]="item.img">
         <div>
             <h2>{{ item.name }}</h2>
             <p>{{ item.languages }}</p>
             <span>{{ item.description | translate }}</span>
-            <div>
+            <div data-aos="flip-up" data-aos-delay="150" data-aos-offset="150" data-aos-duration="800">
                 <a class="button_test" href="{{ item.linktest }}" target="_blank" rel="noopener noreferrer">Live test</a>
                 <a class="button_git" href="{{ item.linkgit }}" target="_blank" rel="noopener noreferrer">Github</a>
             </div>

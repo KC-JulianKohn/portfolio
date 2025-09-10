@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import Aos from 'aos';
 
 interface Skill {
   name: string;
@@ -14,6 +15,10 @@ interface Skill {
 })
 
 export class Skills {
+  ngOnInit(): void { Aos.init() };
+
+  Math = Math;
+
   skills: Skill[] = [
     { name: 'HTML', img: './img/skills/skill_html.png' },
     { name: 'CSS', img: './img/skills/skill_css.png' },
