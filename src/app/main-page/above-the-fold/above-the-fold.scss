@@ -18,9 +18,10 @@ section {
     @include WidthAndHeight();
     max-width: 1920px;
     position: absolute;
+    z-index: 1;
 
     >img {
-        @include WidthAndHeight($w: 700px, $h: 700px);
+        @include WidthAndHeight($w: clamp(28.125rem, 25rem + 15.625vw, 43.75rem), $h: clamp(28.125rem, 25rem + 15.625vw, 43.75rem));
     }
 
     >.img-left {
@@ -43,17 +44,17 @@ main {
         >span {
             padding-right: 30px;
             text-align: center;
-            font-size: 110px;
+            font-size: clamp(1.625rem, 0.575rem + 5.25vw, 6.875rem);
             writing-mode: sideways-lr;
         }
 
         >div {
             >h1 {
-                font-size: 150px;
+                font-size: clamp(2rem, 0.525rem + 7.375vw, 9.375rem);
             }
 
             >span {
-                font-size: 50px;
+                font-size: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
                 color: $purple;
             }
         }
@@ -85,6 +86,47 @@ footer {
             &:hover {
                 transform: scale(1.4);
             }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+
+    :host {
+        @include WidthAndHeight($h: calc(100vh - 50px));
+    }
+
+    .background-layer {
+        @include PositionBox($fd: column);
+
+        >.img-left {
+            padding-right: clamp(0rem, -9.322rem + 46.61vw, 34.375rem);
+            left: 0;
+            margin-left: -350px;
+        }
+
+        >.img-right {
+            padding-left: clamp(0rem, -9.322rem + 46.61vw, 34.375rem);
+            right: 0;
+            margin-right: -350px;
+        }
+    }
+
+    main {
+        >.about_me {
+            >span {
+                padding-right: 5px;
+            }
+        }
+    }
+
+    footer {
+        &::before {
+            @include UnderLine(calc(100vw + 10px), 5px, $green, $tp: 47%, $lf: -100vw);
+        }
+
+        >a {
+            margin-left: 20px;
         }
     }
 }

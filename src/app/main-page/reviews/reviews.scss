@@ -20,7 +20,7 @@ section {
     position: absolute;
 
     >img {
-        @include WidthAndHeight($w: 700px, $h: 700px);
+        @include WidthAndHeight($w: clamp(28.125rem, 25rem + 15.625vw, 43.75rem), $h: clamp(28.125rem, 25rem + 15.625vw, 43.75rem));
         margin: -150px -400px 0 0;
     }
 }
@@ -39,8 +39,9 @@ main {
 
     >.text_box {
         @include PositionBox($fd: column, $jc: space-between, $ai: end);
-        @include WidthAndHeight($w: 40%, $h: 100%);
-        padding: 50px 100px;
+        @include WidthAndHeight($w: 40%);
+        padding: clamp(0.625rem, -0.255rem + 2.817vw, 3.125rem) clamp(1.25rem, -0.511rem + 5.634vw, 6.25rem);
+        background-color: $backgroundcolor;
         margin-right: 100px;
         position: relative;
         border: solid;
@@ -68,7 +69,7 @@ main {
     }
 
     >.img_box {
-        @include WidthAndHeight($w: 300px, $h: 300px);
+        @include WidthAndHeight($w: clamp(11.25rem, 9.75rem + 7.5vw, 18.75rem), $h: clamp(11.25rem, 9.75rem + 7.5vw, 18.75rem));
         position: relative;
         border-radius: 150px;
         border: solid;
@@ -80,7 +81,7 @@ main {
         }
 
         >img {
-            @include WidthAndHeight($w: 300px, $h: 300px);
+            @include WidthAndHeight($w: clamp(11.25rem, 9.75rem + 7.5vw, 18.75rem), $h: clamp(11.25rem, 9.75rem + 7.5vw, 18.75rem));
             border-radius: 150px;
         }
     }
@@ -92,7 +93,7 @@ footer {
     margin-top: 30px;
 
     >button {
-        @include WidthAndHeight($w: 50px, $h: 50px);
+        @include WidthAndHeight($w: clamp(2.188rem, 2.162rem + 0.802vw, 3.125rem), $h: clamp(2.188rem, 2.162rem + 0.802vw, 3.125rem));
         @include PositionBox();
         border: none;
         background-color: $backgroundcolor;
@@ -105,17 +106,42 @@ footer {
         }
 
         >img {
-            @include WidthAndHeight($w: 40px, $h: 40px);
+            @include WidthAndHeight($w: clamp(1.875rem, 1.858rem + 0.535vw, 2.5rem), $h: clamp(1.875rem, 1.858rem + 0.535vw, 2.5rem));
         }
     }
 
     >span {
         padding: 0 12px 0px 12px;
-        font-size: 25px;
+        font-size: clamp(1rem, 0.985rem + 0.481vw, 1.563rem);
         color: $purple;
 
         &.active {
             color: $green;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .background-layer {
+        >img {
+            margin: -300px -300px 0 0;
+        }
+    }
+
+    main {
+        @include PositionBox($fd: column-reverse);
+
+        >h1 {
+            display: none;
+        }
+
+        >.text_box {
+            @include WidthAndHeight($w: 80%);
+            margin: 50px 0 0 0;
+
+            >span {
+                padding-bottom: 50px;
+            }
         }
     }
 }

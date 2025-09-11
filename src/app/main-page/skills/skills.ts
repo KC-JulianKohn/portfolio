@@ -41,6 +41,6 @@ export class Skills {
   }
 
   private checkViewport() {
-    this.isMobile = window.innerWidth <= 1500;
+    this.isMobile = window.innerWidth <= 1000;
   }
 }

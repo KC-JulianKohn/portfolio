@@ -20,7 +20,7 @@ section {
     position: absolute;
 
     >img {
-        @include WidthAndHeight($w: 700px, $h: 700px);
+        @include WidthAndHeight($w: clamp(28.125rem, 25rem + 15.625vw, 43.75rem), $h: clamp(28.125rem, 25rem + 15.625vw, 43.75rem));
         margin: 0 0 -200px -300px;
     }
 }
@@ -36,7 +36,7 @@ header {
     }
 
     >h1 {
-        font-size: 120px;
+        font-size: clamp(2rem, 0.9rem + 5.5vw, 7.5rem);
         font-weight: bolder;
     }
 }
@@ -53,7 +53,7 @@ main {
 
         >p {
             padding-bottom: 20px;
-            font-size: 40px;
+            font-size: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
             font-weight: bolder;
         }
 
@@ -97,15 +97,14 @@ main {
 
         >span {
             color: red;
-            font-size: 16px;
         }
 
         >.username {
-            @include WidthAndHeight($w: 100%);
+            @include WidthAndHeight();
         }
 
         >.email {
-            @include WidthAndHeight($w: 100%);
+            @include WidthAndHeight();
             margin-top: 20px;
         }
 
@@ -122,6 +121,8 @@ main {
 
             >.checkbox {
                 @include WidthAndHeight($w: 20px, $h: 20px);
+                min-width: 20px;
+                min-height: 20px;
                 appearance: none;
                 -webkit-appearance: none;
                 margin-right: 10px;
@@ -181,19 +182,54 @@ footer {
     @include WidthAndHeight();
     position: relative;
     z-index: 10;
-    margin-top: 50px;
+    margin-top: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
 
     >a {
         @include PositionBox();
-        @include WidthAndHeight($w: 40px, $h: 40px);
+        @include WidthAndHeight($w: clamp(1.25rem, 1rem + 1.25vw, 2.5rem), $h: clamp(1.25rem, 1rem + 1.25vw, 2.5rem));
         text-decoration: none;
         border: solid;
         border-radius: 50px;
-        font-size: 35px;
+        font-size: clamp(1rem, 0.762rem + 1.188vw, 2.188rem);
 
         &:hover {
             color: $green;
             border-color: $green;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    main {
+        @include PositionBox($fd: column);
+
+        >.text_box {
+            @include WidthAndHeight();
+        }
+
+        >.input_box {
+            @include WidthAndHeight();
+
+            >input,
+            textarea {
+                padding: 10px clamp(1.875rem, 1.625rem + 1.25vw, 3.125rem) 10px 20px;
+
+                &.valid {
+                    background-size: clamp(0.938rem, 0.75rem + 0.938vw, 1.875rem);
+                }
+
+                &.invalid {
+                    background-size: clamp(0.938rem, 0.75rem + 0.938vw, 1.875rem);
+                }
+            }
+
+            >.username {
+                @include WidthAndHeight($h: auto);
+            }
+
+            >.email {
+                @include WidthAndHeight($h: auto);
+            }
         }
     }
 }

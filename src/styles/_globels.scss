@@ -10,7 +10,7 @@ $turquoise: #1CDAE6;
     flex-direction: $fd
 }
 
-@mixin FirstSection($pt: 100px, $pb: 100px) {
+@mixin FirstSection($pt: clamp(3.125rem, 2.5rem + 3.125vw, 6.25rem), $pb: clamp(1.25rem, 0.25rem + 5vw, 6.25rem)) {
     box-sizing: border-box;
     padding: $pt 5% $pb 5%;
     max-width: 1920px;

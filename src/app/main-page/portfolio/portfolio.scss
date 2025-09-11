@@ -20,7 +20,7 @@ section {
     position: absolute;
 
     >img {
-        @include WidthAndHeight($w: 700px, $h: 700px);
+        @include WidthAndHeight($w: clamp(28.125rem, 25rem + 15.625vw, 43.75rem), $h: clamp(28.125rem, 25rem + 15.625vw, 43.75rem));
         margin: 750px 0 0 -300px;
     }
 }
@@ -29,10 +29,9 @@ section {
     @include PositionBox($fd: column);
     z-index: 10;
 
-
     >h1 {
         position: relative;
-        font-size: 120px;
+        font-size: clamp(2rem, 0.9rem + 5.5vw, 7.5rem);
         margin-bottom: 20px;
         padding: 0 30px;
 
@@ -53,21 +52,21 @@ section {
     margin: 50px 0;
 
     >img {
-        @include WidthAndHeight($w: 400px, $h: 350px);
-        padding: 0 250px;
+        @include WidthAndHeight($w: clamp(14.375rem, 12.25rem + 10.625vw, 25rem), $h: clamp(12.5rem, 10.625rem + 9.375vw, 21.875rem));
+        padding: 0 clamp(9.375rem, -3.125rem + 20vw, 15.625rem);
     }
 
     >div {
         @include WidthAndHeight($w: 40%);
 
         >h2 {
-            font-size: 32px;
+            font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
             color: $purple;
             margin-bottom: 15px;
         }
 
         >p {
-            font-size: 26px;
+            font-size: clamp(1.25rem, 1.175rem + 0.375vw, 1.625rem);
             color: $green;
             margin-bottom: 10px;
         }
@@ -115,6 +114,52 @@ section {
 
         >span {
             text-align: end;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .background-layer {
+        >img {
+            margin: 0 0 0 -300px;
+        }
+    }
+
+    .main_text {
+        >h1 {
+            padding: 0 15px;
+
+            &::after {
+                @include UnderLine(20px, 5px, $purple, $tp: 50%, $lf: -20px);
+            }
+        }
+    }
+
+    .all_projects {
+        @include PositionBox($fd: column);
+        margin: 50px 0;
+
+        >div {
+            @include PositionBox($fd: column);
+            @include WidthAndHeight();
+
+            >p {
+                text-align: center;
+            }
+
+            >span {
+                text-align: center;
+            }
+
+            >div {
+                @include PositionBox($jc: space-around);
+                @include WidthAndHeight();
+                margin-top: 35px;
+
+                >.button_test {
+                    margin-right: 0px;
+                }
+            }
         }
     }
 }

@@ -8,7 +8,7 @@
 }
 
 section {
-    @include FirstSection($pb: 100px);
+    @include FirstSection();
     @include PositionBox($fd: column);
     @include WidthAndHeight();
 }
@@ -19,14 +19,17 @@ main {
 
     >div {
         @include PositionBox($fd: column);
-        @include WidthAndHeight($w: 700px);
+        @include WidthAndHeight($w: clamp(18.125rem, 13rem + 25.625vw, 43.75rem));
 
         >h1 {
-            font-size: 120px;
+            font-size: clamp(2rem, 0.9rem + 5.5vw, 7.5rem);
+            padding-bottom: 15px;
+            z-index: 30;
         }
 
         >span {
             padding-bottom: 25px;
+            z-index: 30;
         }
 
         >table {
@@ -37,6 +40,7 @@ main {
                     padding-bottom: 25px;
 
                     >img {
+                        @include WidthAndHeight($w: clamp(1.875rem, 1.65rem + 1.125vw, 3rem), $h: clamp(1.875rem, 1.65rem + 1.125vw, 3rem));
                         padding-right: 25px;
                         transition: transform 0.2s ease;
 
@@ -51,17 +55,17 @@ main {
 
     >div {
         >.background_img {
-            @include WidthAndHeight($w: 700px, $h: 700px);
+            @include WidthAndHeight($w: clamp(28.125rem, 25rem + 15.625vw, 43.75rem), $h: clamp(28.125rem, 25rem + 15.625vw, 43.75rem));
         }
 
         >.picture {
-            @include WidthAndHeight($w: 500px, $h: 730px);
+            @include WidthAndHeight($w: clamp(20rem, 17.75rem + 11.25vw, 31.25rem), $h: clamp(28.125rem, 25rem + 15.625vw, 43.75rem));
             position: absolute;
             z-index: 5;
         }
 
         >.picture_top {
-            @include WidthAndHeight($w: 500px, $h: 730px);
+            @include WidthAndHeight($w: clamp(20rem, 17.75rem + 11.25vw, 31.25rem), $h: clamp(28.125rem, 25rem + 15.625vw, 43.75rem));
             position: absolute;
             z-index: 20;
         }
@@ -73,5 +77,21 @@ main {
         position: absolute;
         bottom: 0;
         z-index: 10;
+    }
+}
+
+@media (max-width: 1500px) {
+    main {
+        @include PositionBox($fd: column-reverse);
+
+        >div {
+            padding-bottom: 30px;
+        }
+
+        >img {
+            @include WidthAndHeight($w: 100vw, $h: clamp(12.5rem, 9.958rem + 12.712vw, 21.875rem));
+            margin-bottom: clamp(100px, calc(100px + 350 * (100vw - 1500px) / -1180), 450px);
+            bottom: auto;
+        }
     }
 }

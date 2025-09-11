@@ -20,7 +20,7 @@ section {
     position: absolute;
 
     >img {
-        @include WidthAndHeight($w: 700px, $h: 700px);
+        @include WidthAndHeight($w: clamp(28.125rem, 25rem + 15.625vw, 43.75rem), $h: clamp(28.125rem, 25rem + 15.625vw, 43.75rem));
         z-index: 10;
         margin: 0 0 -500px -350px;
     }
@@ -33,11 +33,11 @@ main {
     flex-wrap: wrap;
 
     >div {
-        @include WidthAndHeight($w: 200px, $h: 200px);
+        @include WidthAndHeight($w: clamp(5rem, 3.5rem + 7.5vw, 12.5rem), $h: clamp(5rem, 3.5rem + 7.5vw, 12.5rem));
         @include PositionBox($fd: column);
 
         >img {
-            @include WidthAndHeight($w: 80px, $h: 80px);
+            @include WidthAndHeight($w: clamp(2.5rem, 2rem + 2.5vw, 5rem), $h: clamp(2.5rem, 2rem + 2.5vw, 5rem));
             transition: transform 0.2s ease;
 
             &:hover {
@@ -60,7 +60,7 @@ footer {
 
     >h1 {
         position: relative;
-        font-size: 120px;
+        font-size: clamp(2rem, 0.9rem + 5.5vw, 7.5rem);
         margin-bottom: 20px;
         padding-right: 20px;
 
@@ -70,11 +70,11 @@ footer {
     }
 
     >h2 {
-        font-size: 32px;
+        font-size: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
         margin-bottom: 10px;
 
         >span {
-            font-size: 32px;
+            font-size: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
             color: $purple;
         }
     }
@@ -86,5 +86,24 @@ footer {
     >a {
         @include AnkerButton($mt: 20px, $bc: $green, $ts: transform 0.2s ease);
         @include HoverAnkerButton();
+    }
+}
+
+@media (max-width: 1000px) {
+    .background-layer {
+        >img {
+            margin: 0 0 -150px -250px;
+        }
+    }
+
+    main {
+        @include PositionBox();
+        @include WidthAndHeight();
+        margin: 20px 0 20px 0;
+    }
+
+    footer {
+        @include PositionBox($fd: column);
+        @include WidthAndHeight();
     }
 }
