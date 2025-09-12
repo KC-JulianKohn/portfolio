@@ -1,25 +1,57 @@
 <section id="headerComponent">
-    <a href="#aboveTheFoldComponent"><img src="./img/icons/julian.png"></a>
+    <a (click)="closeMenu()" href="#aboveTheFoldComponent"><img src="./img/icons/julian.png"></a>
 
-    <nav>
-        <div class="links">
-            <a class="aboutme_button" href="#aboutMeComponent">{{ 'header.aboutme_button' | translate }}</a>
-            <a class="skills_button" href="#skillsComponent">{{ 'header.skills_button' | translate }}</a>
-            <a class="portfolio_button" href="#portfolioComponent">Portfolio</a>
-        </div>
+    @if (isMobile) {
+        <button class="burger_button" (click)="toggleMenu()"><img [src]="menuOpen ? './img/buttons/button_burger_menu_close.png' : './img/buttons/button_burger_menu_open.png'"></button>
+        <nav class="burger_menu" [class.active]="menuOpen">
+            <header>
+                <a (click)="closeMenu()" href="#aboveTheFoldComponent"><img src="./img/icons/julian.png"></a>
+                <button class="burger_button" (click)="toggleMenu()"><img [src]="menuOpen ? './img/buttons/button_burger_menu_close.png' : './img/buttons/button_burger_menu_open.png'"></button>
+            </header>
 
-        <div class="buttons_language">
-            @if (translate.getCurrentLang() === 'de') {
-                <button class="button button_active" (click)="translate.use('de')">DE</button>
-            } @else {
-                <button class="button" (click)="translate.use('de')">DE</button>
-            }
+            <main>
+                <div class="links">
+                    <a (click)="closeMenu()" class="aboutme_button" href="#aboutMeComponent">{{ 'header.aboutme_button' | translate }}</a>
+                    <a (click)="closeMenu()" class="skills_button" href="#skillsComponent">{{ 'header.skills_button' | translate }}</a>
+                    <a (click)="closeMenu()" class="portfolio_button" href="#portfolioComponent">Portfolio</a>
+                </div>
 
-            @if (translate.getCurrentLang() === 'en') {
-                <button class="button button_active" (click)="translate.use('en')">EN</button>
-            } @else {
-                <button class="button" (click)="translate.use('en')">EN</button>
-            }
-        </div>
-    </nav>
+                <div class="buttons_language">
+                    @if (translate.getCurrentLang() === 'de') {
+                        <button class="button button_active" (click)="translate.use('de')">DE</button>
+                    } @else {
+                        <button class="button" (click)="translate.use('de')">DE</button>
+                    }
+
+                    @if (translate.getCurrentLang() === 'en') {
+                        <button class="button button_active" (click)="translate.use('en')">EN</button>
+                    } @else {
+                        <button class="button" (click)="translate.use('en')">EN</button>
+                    }
+                </div>
+            </main>
+        </nav>
+    } @else {
+        <nav>
+            <div class="links">
+                <a class="aboutme_button" href="#aboutMeComponent">{{ 'header.aboutme_button' | translate }}</a>
+                <a class="skills_button" href="#skillsComponent">{{ 'header.skills_button' | translate }}</a>
+                <a class="portfolio_button" href="#portfolioComponent">Portfolio</a>
+            </div>
+
+            <div class="buttons_language">
+                @if (translate.getCurrentLang() === 'de') {
+                    <button class="button button_active" (click)="translate.use('de')">DE</button>
+                } @else {
+                    <button class="button" (click)="translate.use('de')">DE</button>
+                }
+
+                @if (translate.getCurrentLang() === 'en') {
+                    <button class="button button_active" (click)="translate.use('en')">EN</button>
+                } @else {
+                    <button class="button" (click)="translate.use('en')">EN</button>
+                }
+            </div>
+        </nav>
+    }
 </section>

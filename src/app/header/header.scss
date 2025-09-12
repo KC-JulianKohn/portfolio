@@ -70,3 +70,94 @@ nav {
         }
     }
 }
+
+@media (max-width: 900px) {
+    .burger_button {
+        @include WidthAndHeight($w: 35px, $h: 30px);
+        background-color: $backgroundcolor;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        >img {
+            @include WidthAndHeight($w: 30px, $h: 25px);
+        }
+    }
+
+    .burger_menu {
+        @include PositionBox($fd: column);
+        position: fixed;
+        bottom: 0;
+        right: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: $backgroundcolor;
+        transition: right 0.3s ease;
+        z-index: 999;
+
+        &.active {
+            right: 0;
+        }
+
+        >header {
+            @include PositionBox($jc: space-around);
+            @include WidthAndHeight($h: 50px);
+        }
+
+        >main {
+            @include PositionBox($fd: column);
+            @include WidthAndHeight();
+
+            >.links {
+                @include PositionBox($fd: column);
+                padding: 0;
+
+                >a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 24px;
+                    padding: 10px 0;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $green;
+                    }
+                }
+            }
+
+            >.buttons_language {
+
+                >.button {
+                    background-color: $backgroundcolor;
+                    border-color: $green;
+                    border-width: 1px;
+                    border-radius: 10px;
+                    font-size: 20px;
+                    margin: 7px;
+                    padding: 0px 10px 0px 10px;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $purple;
+                        border-color: $purple;
+                    }
+                }
+
+                >.button_active {
+                    background-color: $green;
+                    border-color: $green;
+                    font-weight: bolder;
+
+                    &:hover {
+                        cursor: auto;
+                        background-color: $green;
+                        border-color: $green;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+}
