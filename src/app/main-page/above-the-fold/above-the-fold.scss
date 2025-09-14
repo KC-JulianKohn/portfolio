@@ -2,7 +2,7 @@
 
 :host {
     @include PositionBox();
-    @include WidthAndHeight($h: calc(100vh - 100px));
+    @include WidthAndHeight($h: 100vh);
     background-color: $backgroundcolor;
     position: relative;
 }
@@ -93,7 +93,7 @@ footer {
 @media (max-width: 900px) {
 
     :host {
-        @include WidthAndHeight($h: calc(100vh - 50px));
+        @include WidthAndHeight($h: 100vh);
     }
 
     .background-layer {

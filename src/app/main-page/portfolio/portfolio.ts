@@ -43,7 +43,7 @@ export class Portfolio {
       description: 'portfolio.pokedex_text',
       img: './img/projects/projects_pokedex.png',
       linkgit: 'https://github.com/KC-JulianKohn/PokeDex_Modul_8',
-      linktest: ''
+      linktest: 'https://pokedex.julian-kohn.de/index.html'
     },
   ];
 
