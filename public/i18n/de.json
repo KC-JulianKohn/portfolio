@@ -33,9 +33,8 @@
         "pokedex_text": "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
     },
     "reviews": {
-        "review_1": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
-        "review_2": "Michi war ein hervorragender Teamkollege bei DA. Sein positives Engagement und seine Bereitschaft, Verantwortung zu übernehmen, haben wesentlich dazu beigetragen, dass wir unsere Ziele erreichen konnten.",
-        "review_3": "Es war mir eine große Freude, mit Michael zusammenzuarbeiten. Er versteht es, seine Teammitglieder zu motivieren und zu ermutigen, ihr Bestes zu geben, und bringt sich stets mit neuen Ideen in Brainstormings ein. Was das Wohlergehen der Gruppenmitglieder angeht, war er immer präsent und bereit, anderen zuzuhören und ihnen zu helfen, und das mit viel Humor."
+        "review_1": "Julian überzeugt durch seine ausdrucksstarke und argumentationsstarke Kommunikation, mit der er Diskussionen konstruktiv bereichert. Sein Code ist stets sauber, strukturiert und technisch solide umgesetzt. Er zeigt Engagement und Einsatzbereitschaft, um seine Aufgaben termingerecht abzuschließen, und bringt sich aktiv in das Projektgeschehen ein. Auch in intensiven Abstimmungsphasen bleibt Julians Fokus immer auf das gemeinsame Ziel gerichtet. Er beweist Teamfähigkeit, Eigeninitiative und den Willen, seine Arbeit kontinuierlich zu verbessern.",
+        "review_2": "Julian war ein wertvolles Mitglied unseres Projektteams. Er zeichnete sich durch sehr gute Kommunikationsfähigkeiten aus und trug damit wesentlich zu einer offenen und effizienten Zusammenarbeit im Team bei. Außerdem brachte er stets kreative und durchdachte Ideen für mögliche Lösungen ein und überzeugte durch sauberen, gut strukturierten Code, der die Qualität unseres Projekts maßgeblich unterstützte."
     },
     "contact": {
         "headline": "Kontakt",

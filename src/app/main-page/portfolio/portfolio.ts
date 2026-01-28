@@ -26,8 +26,8 @@ export class Portfolio {
       languages: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'portfolio.join_text',
       img: './img/projects/projects_join.png',
-      linkgit: '',
-      linktest: ''
+      linkgit: 'https://github.com/KC-JulianKohn/join',
+      linktest: 'https://join.julian-kohn.de/login'
     },
     {
       name: 'El Dragonnoid',
@@ -35,7 +35,7 @@ export class Portfolio {
       description: 'portfolio.el_dragonnoid_text',
       img: './img/projects/projects_el_dragonnoid.png',
       linkgit: 'https://github.com/KC-JulianKohn/El_Dragonoid_Modul_12',
-      linktest: ''
+      linktest: 'https://el-dragonnoid.julian-kohn.de/index.html'
     },
     {
       name: 'Pokédex',

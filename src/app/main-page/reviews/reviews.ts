@@ -19,19 +19,14 @@ export class Reviews {
 
   allReviews: Review[] = [
     {
-      name: "V. Schuster - Team Partner",
+      name: "T.Dreifke - Team Partner",
       review: "reviews.review_1",
-      img: "/img/pictures/picture_placeholder_03.png"
+      img: "/img/pictures/picture_review_01.png"
     },
     {
-      name: "E.Eichinger - Team Partner",
+      name: "D.Moysidis - Team Partner",
       review: "reviews.review_2",
-      img: "/img/pictures/picture_placeholder_04.png"
-    },
-    {
-      name: "I.Nuber - Frontend Engineer",
-      review: "reviews.review_3",
-      img: "/img/pictures/picture_placeholder_02.png"
+      img: "/img/pictures/picture_review_02.png"
     },
   ];
 
